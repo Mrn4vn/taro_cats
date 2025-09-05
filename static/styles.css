@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;                         /* Flexbox layout */
+    justify-content: center;               /* Централизация карт */
+    align-items: center;                   /* Вертикальное выравнивание */
+    flex-wrap: nowrap;                     /* Не допускаем перенос строки */
+    overflow-x: scroll;                    /* Скроллинг, если недостаточно места */
+    width: 99%;                          /* Полная ширина экрана */
+    /*min-height: 300px;                      Минимальная высота области карт */
+}
+
+.card-back {
+    width: calc((100vw / 3) - 3px);      /* Примерно третья часть экрана */
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;                          /* Пространство между картами */
+}
+
+.hidden-card-details {
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    width: 30%;                           /* Занимают 90% экрана */
+    max-width: 600px;                     /* Максимальная ширина на больших экранах */
+}
+
+.hidden-card-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
